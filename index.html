@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+	<title>Interactive Map</title>
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+
+	<script src="js/d3.js" charset="utf-8"></script>
+	<script src="js/d3.hexbin.v0.min.js" charset="utf-8"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src="js/leaflet-omnivore.min.js" charset="utf-8"></script>
+	<script src="leaflet.d3.js" charset="utf-8"></script>
+	<script src="js/jquery.min.js"></script>
+
+	<style>
+		.hexbin-hexagon {
+			stroke: #000;
+			stroke-width: 0px;
+			cursor: pointer;
+		}
+
+    div.tooltip {
+  		position: absolute;
+  		text-align: center;
+  		padding: 10px;
+  		font-size: 12px;
+  		background: #FFF;
+  		border: 1px;
+  		visibility: hidden;
+  		pointer-events: none;
+}
+
+	</style>
+
+</head>
+
+
+
+<body class="index">
+
+	<!-- Header -->
+	<!-- <header id="header" style="position: fixed; top: 0px; left: 0px; right: 0px; z-index: 1030;">
+	</header> -->
+
+	<!-- Main -->
+	<article id="main">
+
+		<!-- 2014 Location History -->
+		<div id="top">
+
+			<section class="wrapper style3 container">
+
+				<header>
+					<h2><center>ONEWAY query locations (origin)</center></h2>
+				</header>
+
+				<center style="margin-bottom: 10px;">
+			  	<label for="hour"
+			        style="display: inline-block; text-align: right; margin-right: 10px;">
+			        hour = <span id="hour-value">…</span>
+			  	</label>
+			  	<input type="range" min="0" max="23" id="hour">
+				</center>
+
+				<!-- The map element -->
+				<div style="margin: 0 15px;">
+					<div id="map" style="width: 100%; height: 625px; border: 1px solid #ccc;"></div>
+				</div>
+
+				<p style="margin-left: 15px;">
+					Based off of work by <a href="http://people.ischool.berkeley.edu/~juanshishido/locationhistoryhex.html" target="_blank">Juan Shishido</a>.
+				</p>
+
+			</section>
+
+		</div>
+
+	</article>
+
+	<script src="one-way-map.js"></script>
+</body>
+
+</html>
